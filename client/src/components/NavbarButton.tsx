@@ -1,9 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const NavbarButton = () => {
+interface NavbarButtonProps {
+  name: String;
+  path: String;
+}
+
+const NavbarButton: React.FC<NavbarButtonProps> = ({ name, path }) => {
   console.log();
 
-  return <div>NavbarButton</div>;
+  return (
+    <div>
+      <Link to={path} className="navbar-button">
+        {name}
+      </Link>
+    </div>
+  );
 };
 
 export default NavbarButton;

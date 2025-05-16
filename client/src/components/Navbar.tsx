@@ -20,7 +20,8 @@ const Navbar = () => {
 
         return (
           // eslint-disable-next-line react/jsx-key
-          <p key={item.name}>{item.name}</p>
+          <NavbarButton key={item.name} name={item.name} path={item.path} />
+          // <p key={item.name}>{item.name}</p>
         );
       })}
     </nav>
