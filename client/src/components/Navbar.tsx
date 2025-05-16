@@ -15,12 +15,14 @@ const Navbar = () => {
   return (
     <nav>
       <Logo />
-      {menuItems.map((item) => (
-        <Link key={item.name} to={item.path} className="navbar-item">
-          {item.name}
-        </Link>
-      ))}
-      <NavbarButton />
+      {menuItems.map((item) => {
+        console.log(item.name);
+
+        return (
+          // eslint-disable-next-line react/jsx-key
+          <p key={item.name}>{item.name}</p>
+        );
+      })}
     </nav>
   );
 };
