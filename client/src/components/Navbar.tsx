@@ -13,17 +13,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
+    <nav className="navbar-container">
       <Logo />
-      {menuItems.map((item) => {
-        console.log(item.name);
+      <div className="navbar-button-container">
+        {menuItems.map((item) => {
+          console.log(item.name);
 
-        return (
-          // eslint-disable-next-line react/jsx-key
-          <NavbarButton key={item.name} name={item.name} path={item.path} />
-          // <p key={item.name}>{item.name}</p>
-        );
-      })}
+          return (
+            // eslint-disable-next-line react/jsx-key
+
+            <NavbarButton key={item.name} name={item.name} path={item.path} />
+            // <p key={item.name}>{item.name}</p>
+          );
+        })}
+      </div>
     </nav>
   );
 };

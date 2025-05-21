@@ -1,0 +1,72 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  min-height: 100vh;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 10vh;
+  background-color: lightblue;
+  /* margin: 10px; */
+  border: 1px solid green;
+  /* padding: 15px; */
+}
+
+.navbar-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border: 1px solid blue;
+  margin: 25px;
+  /* padding: 20px; */
+  /* padding: 10px; */
+}
+
+.navbar-button-container {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: center; */
+  background-color: orange;
+  border: 1px solid blue;
+  margin: 25px;
+  padding: 20px;
+}
+
+.navbar-button {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: center; */
+  background-color: lightgreen;
+  border: 1px solid red;
+  /* padding: 10px; */
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 30px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  background-color: lightgray;
+  /* margin: 10px; */
+  border: 1px solid blue;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: yellow;
+}
