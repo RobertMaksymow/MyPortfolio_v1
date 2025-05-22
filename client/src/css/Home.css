@@ -1,0 +1,25 @@
+h1 {
+  color: blue;
+  text-align: center;
+  font-size: 2rem;
+
+  /* More traditional way */
+
+  /* @media (width >= 40em) { */
+  /* 640px */
+  /* font-size: 3rem; */
+  /* } */
+  /* @media (width >= 60em) { */
+  /* 960px */
+  /* font-size: 4rem; */
+  /* } */
+
+  /* More modern way */
+
+  font-size: clamp(2rem, 0.7rem + 5.5vw, 4rem);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
