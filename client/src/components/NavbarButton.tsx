@@ -11,7 +11,7 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({ name, path }) => {
 
   return (
     <div className="navbar-button">
-      <Link to={path} className="navbar-button">
+      <Link to={path} className="navbar-button-link">
         {name}
       </Link>
     </div>

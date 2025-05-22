@@ -1,7 +1,8 @@
 .app-container {
   display: flex;
+  /* grid-template-columns: 1fr 1fr; */
   flex-direction: column;
-  background-color: pink;
+  background-color: #242424;
   min-height: 100vh;
 }
 
@@ -12,9 +13,9 @@
   justify-content: space-between;
   width: 100%;
   min-height: 10vh;
-  background-color: lightblue;
+  background-color: black;
   /* margin: 10px; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* padding: 15px; */
 }
 
@@ -23,11 +24,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: red;
-  border: 1px solid blue;
-  margin: 25px;
-  /* padding: 20px; */
-  /* padding: 10px; */
+  color: white;
+  text-decoration: none; /* DOESNT WORK */
+  margin: 1%;
+  font-size: 3rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .navbar-button-container {
@@ -35,8 +36,8 @@
   flex-direction: row;
   /* align-items: center;
   justify-content: center; */
-  background-color: orange;
-  border: 1px solid blue;
+  /* background-color: orange; */
+  border: 1px solid white;
   margin: 25px;
   padding: 20px;
 }
@@ -46,12 +47,24 @@
   flex-direction: row;
   /* align-items: center;
   justify-content: center; */
-  background-color: lightgreen;
-  border: 1px solid red;
+  /* background-color: lightgreen; */
+  /* border: 1px solid yellow; */
   /* padding: 10px; */
   cursor: pointer;
   padding: 10px;
   margin: 0 30px;
+}
+
+.navbar-button:hover {
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-button-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  /* font-family: "Courier New", Courier, monospace; */
 }
 
 .main-container {
@@ -59,8 +72,6 @@
   flex-direction: column;
   flex: 1;
   width: 100%;
-  background-color: lightgray;
-  /* margin: 10px; */
   border: 1px solid blue;
 }
 

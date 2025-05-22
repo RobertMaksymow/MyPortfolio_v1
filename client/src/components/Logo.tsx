@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const Logo = () => {
   return (
     <div className="navbar-logo-container">
-      <Link to={"/"}>R.A. Maksymow</Link>
+      <Link to={"/"}>
+        <p>R.A. Maksymow</p>
+      </Link>
     </div>
   );
 };
