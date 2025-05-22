@@ -1,26 +1,36 @@
 .cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* grid-auto-rows: 1fr; */
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin: 5%;
 
   /* 640px */
-  @media (width >= 40em) {
+  /* @media (width >= 40em) {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
   /* 960px */
-  @media (width >= 60em) {
+  /* @media (width >= 60em) {
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
 }
 
 .card-app {
+  flex: 1;
   background: black;
   border: 1px solid white;
   /* border-radius: 8px; */
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (width >= 40em) {
+    flex: 48%; /* 2 cards per row */
+  }
+  @media (width >= 60em) {
+    flex: 22%; /* 3 cards per row */
+  }
 }
 
 .card-app:hover {
