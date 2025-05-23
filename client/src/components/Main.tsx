@@ -11,7 +11,6 @@ import Blog from "../pages/Blog";
 const Main = () => {
   return (
     <main className="main-container">
-      Main space
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
