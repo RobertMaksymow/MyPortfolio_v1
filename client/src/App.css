@@ -1,83 +1,142 @@
+/* Grid container */
+/* Small mobile (<480px) — this is default */
 .app-container {
-  display: flex;
-  /* grid-template-columns: 1fr 1fr; */
-  flex-direction: column;
-  background-color: #242424;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
-.navbar-container {
+.header-container {
+  grid-area: header;
+  background: black;
+  color: white;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  min-height: 10vh;
-  background-color: black;
-  /* margin: 10px; */
-  /* border: 1px solid green; */
-  /* padding: 15px; */
-}
-
-.navbar-logo-container {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none; /* DOESNT WORK */
-  margin: 1%;
-  font-size: 3rem;
-  font-family: "Courier New", Courier, monospace;
+  position: sticky;
 }
 
-.navbar-button-container {
-  display: flex;
-  flex-direction: row;
-  /* align-items: center;
-  justify-content: center; */
-  /* background-color: orange; */
-  border: 1px solid white;
-  margin: 25px;
-  padding: 20px;
+.header-container .navbar-button-container {
+  display: none;
 }
 
-.navbar-button {
-  display: flex;
-  flex-direction: row;
-  /* align-items: center;
-  justify-content: center; */
-  /* background-color: lightgreen; */
-  /* border: 1px solid yellow; */
-  /* padding: 10px; */
-  cursor: pointer;
-  padding: 10px;
-  margin: 0 30px;
+.header-container .main-container {
+  grid-area: main;
+  padding: 1rem;
 }
 
-.navbar-button:hover {
-  background-color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.navbar-button-link {
+.header-logo-link {
   text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  /* font-family: "Courier New", Courier, monospace; */
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  width: 100%;
-  border: 1px solid blue;
+.sidebar-container {
+  grid-area: sidebar;
+  background: rgb(54, 54, 54);
+  color: gray;
+  padding: 1rem;
+  display: none; /* Hidden by default */
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: yellow;
+  grid-area: footer;
+  background: black;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Large mobile (≥480px) */
+@media (min-width: 480px) {
+  .header-container {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+  .app-container {
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+  }
+
+  .sidebar-container {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .header-container .navbar-button-container {
+    display: flex;
+    /* padding: 5px; */
+  }
+
+  .navbar-button {
+    padding: 8px;
+    background-color: transparent;
+    text-decoration: none;
+    margin: 0.5rem;
+  }
+
+  .navbar-button-link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .navbar-button:hover {
+    background-color: gray;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .app-container {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .header-container {
+    font-size: 1.4rem;
+  }
+
+  /* .header-logo {
+    font-size: 3rem;
+  } */
+
+  .navbar-button {
+    padding: 13px;
+    background-color: transparent;
+    text-decoration: none;
+    margin: 0.5rem;
+  }
+}
+
+/* Large desktop (≥1280px) */
+@media (min-width: 1280px) {
+  .app-container {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .main-container {
+    padding: 2rem;
+  }
+
+  .header-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .header-container .header-logo {
+    font-size: 2rem;
+  }
 }

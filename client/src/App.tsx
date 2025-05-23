@@ -1,29 +1,24 @@
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
 import "./App.css";
 
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
-import About from "./pages/About";
-import Navbar from "./components/Navbar";
-import Learning from "./pages/Learning";
-import Blog from "./pages/Blog";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Main from "./components/Main";
 // import Navbar from "./components/Navbar";
 
 function App() {
+  const [sidebarVisibleLeft, setSidebarVisibleLeft] = useState(true);
+  const [sidebarVisibleRight, setSidebarVisibleRight] = useState(true);
+
+  const toggleSidebarLeft = () => setSidebarVisibleLeft((prev) => !prev);
+  const toggleSidebarRight = () => setSidebarVisibleRight((prev) => !prev);
+
   return (
     <div className="app-container">
-      <Navbar />
-      <sidebar>Sidebar</sidebar>
-      <main className="main-container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/learning" element={<Learning />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </main>
+      <Header />
+      <Sidebar />
+      <Main />
       <Footer />
     </div>
   );
