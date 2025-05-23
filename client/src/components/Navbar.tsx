@@ -1,7 +1,4 @@
-import React from "react";
-import Logo from "./Logo";
 import NavbarButton from "./NavbarButton";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menuItems = [
@@ -9,24 +6,20 @@ const Navbar = () => {
     { name: "Portfolio", path: "/portfolio" },
     { name: "Learning", path: "/learning" },
     { name: "Blog", path: "/blog" },
-    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <nav className="navbar-container">
-      <Logo />
-      <div className="navbar-button-container">
+      <ul className="navbar-button-container">
         {menuItems.map((item) => {
           console.log(item.name);
 
           return (
-            // eslint-disable-next-line react/jsx-key
-
             <NavbarButton key={item.name} name={item.name} path={item.path} />
-            // <p key={item.name}>{item.name}</p>
           );
         })}
-      </div>
+      </ul>
     </nav>
   );
 };

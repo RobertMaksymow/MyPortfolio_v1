@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <div className="navbar-logo-container">
+    <div className="header-logo-container">
       <Link to={"/"}>
-        <p>R.A. Maksymow</p>
+        <p>R. A. Maksymow</p>
       </Link>
     </div>
   );
