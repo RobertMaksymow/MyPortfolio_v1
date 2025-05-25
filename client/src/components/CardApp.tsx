@@ -1,4 +1,4 @@
-import React from "react";
+import {} from "react";
 import img from "../assets/img/guy.jpg";
 
 const CardApp = () => {

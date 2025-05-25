@@ -1,4 +1,4 @@
-import React from "react";
+import {} from "react";
 
 const About = () => {
   return <div>Hello from About page</div>;

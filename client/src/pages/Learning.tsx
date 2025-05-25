@@ -1,4 +1,4 @@
-import React from "react";
+import {} from "react";
 
 const Learning = () => {
   return <div>This is Learning page</div>;

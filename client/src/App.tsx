@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import {} from "react";
 import "./App.css";
 
 import Footer from "./components/Footer";
@@ -8,11 +8,11 @@ import Main from "./components/Main";
 // import Navbar from "./components/Navbar";
 
 function App() {
-  const [sidebarVisibleLeft, setSidebarVisibleLeft] = useState(true);
-  const [sidebarVisibleRight, setSidebarVisibleRight] = useState(true);
+  // const [sidebarVisibleLeft, setSidebarVisibleLeft] = useState(true);
+  // const [sidebarVisibleRight, setSidebarVisibleRight] = useState(true);
 
-  const toggleSidebarLeft = () => setSidebarVisibleLeft((prev) => !prev);
-  const toggleSidebarRight = () => setSidebarVisibleRight((prev) => !prev);
+  // const toggleSidebarLeft = () => setSidebarVisibleLeft((prev) => !prev);
+  // const toggleSidebarRight = () => setSidebarVisibleRight((prev) => !prev);
 
   return (
     <div className="app-container">

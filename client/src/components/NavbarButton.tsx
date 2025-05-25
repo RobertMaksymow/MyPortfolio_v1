@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface NavbarButtonProps {
-  name: String;
-  path: String;
+  name: string;
+  path: string;
 }
 
 const NavbarButton: React.FC<NavbarButtonProps> = ({ name, path }) => {

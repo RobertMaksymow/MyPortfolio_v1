@@ -1,4 +1,4 @@
-import React from "react";
+import {} from "react";
 
 const Blog = () => {
   return <div>This is Blog page</div>;

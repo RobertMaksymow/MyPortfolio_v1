@@ -1,4 +1,4 @@
-import React from "react";
+import {} from "react";
 import "../css/Home.css";
 import img from "../assets/img/stock.jpg";
 import img2 from "../assets/img/stock2.jpg";
